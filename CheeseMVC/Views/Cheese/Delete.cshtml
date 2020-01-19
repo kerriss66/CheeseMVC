@@ -1,0 +1,23 @@
+﻿
+
+
+<h1>@ViewBag.title</h1>
+<p>Select which cheese(s) you would like to remove:</p>
+<form method="post">
+
+       
+    @foreach (Cheese cheese in ViewBag.cheeses)  // var is used in place of Cheese in the video
+    {
+        <input type="checkbox" name="cheeseIds" id="@cheese.ID" value="@cheese.ID"/>
+        <label for="@cheese.ID">@cheese.Name : @cheese.Description</label>
+        
+        <br />
+
+    }  
+        
+
+    <input type="submit" value="Remove"/>
+</form>
+
+
+
